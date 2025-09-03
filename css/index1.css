@@ -48,17 +48,19 @@ nav ul {
     gap: 2rem;
 }
 
+
 nav a {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
     border-radius: 8px;
-}
+    }
 
-nav a:hover, nav a.active {
-    color: #ff6b6b;
-    background: rgba(255, 107, 107, 0.1);
+nav a:hover,
+nav a.active {
+color: #ff6b6b;
+background: rgba(255, 107, 107, 0.1);
 }
 
 /* ------------------------------------------------------- */
