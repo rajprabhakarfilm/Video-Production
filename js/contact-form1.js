@@ -169,8 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 user_message: formData.get('message'),
                 service_requested: formData.get('service') || 'Not specified',
                 phone: formData.get('phone') || 'Not provided',
-                budget: formData.get('budget') || 'Not specified',
-                timeline: formData.get('timeline') || 'Not specified',
+                whatsapp: formData.get('whatsapp') || 'Not provided',
                 submission_date: new Date().toLocaleDateString(),
                 company_name: 'Provideos Studios'
             };
