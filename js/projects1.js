@@ -504,6 +504,7 @@ function initializeSmoothScroll() {
     });
 }
 
+
 // Initialize all functionality when DOM is ready
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize intersection observer for better performance

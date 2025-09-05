@@ -57,58 +57,61 @@ document.addEventListener('DOMContentLoaded', function() {
     animatePrices();
 });
 
-// Create subtle background particles
-function createBackgroundParticles() {
-    const particleCount = 50;
-    const particles = [];
-
-    for (let i = 0; i < particleCount; i++) {
-        const particle = document.createElement('div');
-        particle.style.cssText = `
-            position: fixed;
-            width: 2px;
-            height: 2px;
-            background: rgba(255, 107, 107, 0.3);
-            border-radius: 50%;
-            pointer-events: none;
-            z-index: 1;
-        `;
-
-        // Random starting position
-        particle.style.left = Math.random() * 100 + '%';
-        particle.style.top = Math.random() * 100 + '%';
-
-        document.body.appendChild(particle);
-        particles.push({
-            element: particle,
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-            vx: (Math.random() - 0.5) * 0.5,
-            vy: (Math.random() - 0.5) * 0.5
-        });
-    }
-
-    // Animate particles
-    function animateParticles() {
-        particles.forEach(particle => {
-            particle.x += particle.vx;
-            particle.y += particle.vy;
-
-            // Wrap around screen edges
-            if (particle.x < 0) particle.x = window.innerWidth;
-            if (particle.x > window.innerWidth) particle.x = 0;
-            if (particle.y < 0) particle.y = window.innerHeight;
-            if (particle.y > window.innerHeight) particle.y = 0;
-
-            particle.element.style.left = particle.x + 'px';
-            particle.element.style.top = particle.y + 'px';
-        });
-
-        requestAnimationFrame(animateParticles);
-    }
-
-    animateParticles();
-}
+//// Create subtle background particles
+//function createBackgroundParticles() {
+//    const particleCount = 50;
+//    const particles = [];
+//
+//    for (let i = 0; i < particleCount; i++) {
+//        const particle = document.createElement('div');
+//        particle.style.cssText = `
+//            position: fixed;
+//            width: 6px;
+//            height: 6px;
+//            background: rgba(251, 191, 36, 0.5);   /* 🌟 soft golden yellow */
+//            border-radius: 50%;
+//            pointer-events: none;
+//            z-index: 1;
+//            filter: blur(2px) brightness(1.1);     /* subtle glassy glow */
+//            box-shadow: 0 0 10px rgba(251, 191, 36, 0.35); /* soft golden halo */
+//            animation: twinkle 3s ease-in-out infinite alternate; /* ✨ shimmer */
+//        `;
+//
+//        // Random starting position
+//        particle.style.left = Math.random() * 100 + '%';
+//        particle.style.top = Math.random() * 100 + '%';
+//
+//        document.body.appendChild(particle);
+//        particles.push({
+//            element: particle,
+//            x: Math.random() * window.innerWidth,
+//            y: Math.random() * window.innerHeight,
+//            vx: (Math.random() - 0.5) * 0.5,
+//            vy: (Math.random() - 0.5) * 0.5
+//        });
+//    }
+//
+//    // Animate particles
+//    function animateParticles() {
+//        particles.forEach(particle => {
+//            particle.x += particle.vx;
+//            particle.y += particle.vy;
+//
+//            // Wrap around screen edges
+//            if (particle.x < 0) particle.x = window.innerWidth;
+//            if (particle.x > window.innerWidth) particle.x = 0;
+//            if (particle.y < 0) particle.y = window.innerHeight;
+//            if (particle.y > window.innerHeight) particle.y = 0;
+//
+//            particle.element.style.left = particle.x + 'px';
+//            particle.element.style.top = particle.y + 'px';
+//        });
+//
+//        requestAnimationFrame(animateParticles);
+//    }
+//
+//    animateParticles();
+//}
 
 // Animate price numbers with counting effect
 function animatePrices() {

@@ -21,7 +21,7 @@ body {
 }
 
 .service-card {
-    background: rgba(254, 249, 231, 0.8)
+    background: rgba(254, 249, 231, 0.8);
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 2rem;
@@ -675,4 +675,10 @@ footer {
     .close {
         font-size: 1.5rem;
     }
+}
+
+@keyframes twinkle {
+    0%   { opacity: 0.4; transform: scale(0.9); }
+    50%  { opacity: 1;   transform: scale(1.1); }
+    100% { opacity: 0.5; transform: scale(1); }
 }
