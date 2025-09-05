@@ -7,126 +7,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
-    color: #333;
-    background: linear-gradient(135deg, #ebe4e4 0%, #ebe4e4 100%);
+    color: #2c2c2c;
+    background: linear-gradient(135deg, #fefdf8 0%, #fffbeb 100%);
     min-height: 100vh;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Header Styles */
-header {
-    background: rgba(39, 39, 51, 0.9);
-    backdrop-filter: blur(10px);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    padding: 1rem 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #ebe4e4;
-    text-decoration: none;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 2rem;
-}
-
-nav a {
-    color: #ebe4e4;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    padding: 0.5rem 1rem;
-    border-radius: 8px;
-}
-
-nav a:hover, nav a.active {
-    color: #f2c106;
-    background: rgba(242, 193, 6, 0.1);
-}
-
-/* WhatsApp Floating Pill Button */
-.whatsapp-pill {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #f2c106;
-    color: #272733;
-    padding: 12px 18px;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: bold;
-    text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    z-index: 1000;
-}
-
-.whatsapp-pill img {
-    width: 22px;
-    height: 22px;
-}
-
-.whatsapp-pill:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
-}
-
-/* Main Content */
-main {
-    margin-top: 100px;
-    padding: 2rem 0;
-}
-
-/* Page Header */
-.page-header {
-    text-align: center;
-    padding: 3rem 0;
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-}
-
-.page-header.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.page-header h1 {
-    font-size: 3.5rem;
-    color: #272733;
-    margin-bottom: 1rem;
-    background: linear-gradient(45deg, #f2c106, #272733);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.page-header p {
-    font-size: 1.3rem;
-    color: #272733;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 /* Services Grid */
@@ -138,14 +21,15 @@ main {
 }
 
 .service-card {
-    background: rgba(39, 39, 51, 0.05);
+    background: rgba(254, 249, 231, 0.8)
     backdrop-filter: blur(10px);
     border-radius: 20px;
     padding: 2rem;
-    border: 1px solid rgba(39, 39, 51, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
     transition: all 0.3s ease;
     opacity: 0;
     transform: translateY(50px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .service-card.visible {
@@ -155,15 +39,17 @@ main {
 
 .service-card:hover {
     transform: translateY(-10px);
-    background: rgba(39, 39, 51, 0.08);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(254, 252, 232, 0.95);
+    box-shadow: 0 20px 40px rgba(251, 191, 36, 0.25);
+    border-color: rgba(251, 191, 36, 0.4);
 }
 
 .service-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
     text-align: center;
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f1f1f;
     width: 80px;
     height: 80px;
     border-radius: 20px;
@@ -171,17 +57,22 @@ main {
     align-items: center;
     justify-content: center;
     margin: 0 auto 1.5rem;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
 }
 
 .service-card h3 {
     font-size: 1.5rem;
-    color: #272733;
+    color: #1f1f1f;
     margin-bottom: 1rem;
     text-align: center;
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .service-card p {
-    color: #272733;
+    color: #404040;
     margin-bottom: 1.5rem;
     line-height: 1.6;
 }
@@ -196,7 +87,7 @@ main {
 }
 
 .service-features li {
-    color: #272733;
+    color: #404040;
     padding: 0.3rem 0;
     padding-left: 1.5rem;
     position: relative;
@@ -206,21 +97,22 @@ main {
     content: '✓';
     position: absolute;
     left: 0;
-    color: #f2c106;
+    color: #f59e0b;
     font-weight: bold;
 }
 
 .service-price {
     text-align: center;
     padding: 1rem;
-    background: rgba(242, 193, 6, 0.1);
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
     border-radius: 10px;
-    color: #272733;
+    color: #1f1f1f;
     font-size: 1.1rem;
+    border: 1px solid rgba(251, 191, 36, 0.3);
 }
 
 .service-price strong {
-    color: #f2c106;
+    color: #f59e0b;
     font-size: 1.3rem;
 }
 
@@ -228,12 +120,14 @@ main {
 .cta-section {
     text-align: center;
     padding: 4rem 2rem;
-    background: rgba(39, 39, 51, 0.1);
+    background: rgba(254, 249, 231, 0.6);
     border-radius: 20px;
     margin: 3rem 0;
     opacity: 0;
     transform: translateY(50px);
     transition: all 0.8s ease;
+    border: 1px solid rgba(251, 191, 36, 0.2);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
 }
 
 .cta-section.visible {
@@ -243,9 +137,9 @@ main {
 
 .cta-section h2 {
     font-size: 2.5rem;
-    color: #272733;
+    color: #1f1f1f;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -253,113 +147,26 @@ main {
 
 .cta-section p {
     font-size: 1.2rem;
-    color: #272733;
+    color: #404040;
     margin-bottom: 2rem;
 }
 
 .cta-button {
     display: inline-block;
-    background: linear-gradient(45deg, #f2c106, #272733);
-    color: white;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f1f1f;
     padding: 1rem 2.5rem;
     text-decoration: none;
     border-radius: 50px;
     font-weight: bold;
     font-size: 1.1rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(242, 193, 6, 0.3);
-}
-
-/* Footer */
-footer {
-    background: rgba(39, 39, 51, 0.9);
-    color: #ebe4e4;
-    text-align: center;
-    padding: 2rem 0;
-    margin-top: 4rem;
-}
-
-/* Animation Classes */
-.fade-in {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .page-header h1 {
-        font-size: 2.5rem;
-    }
-
-    .services-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .service-card {
-        padding: 1.5rem;
-    }
-
-    .cta-section {
-        padding: 3rem 1rem;
-    }
-
-    .cta-section h2 {
-        font-size: 2rem;
-    }
-
-    nav ul {
-        gap: 1rem;
-    }
-
-    .logo {
-        font-size: 1.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .page-header h1 {
-        font-size: 2rem;
-    }
-
-    .page-header p {
-        font-size: 1.1rem;
-    }
-
-    .service-card {
-        padding: 1rem;
-    }
-
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .whatsapp-pill {
-        bottom: 15px;
-        right: 15px;
-        padding: 10px 15px;
-        font-size: 14px;
-    }
-
-    .whatsapp-pill img {
-        width: 20px;
-        height: 20px;
-    }
+    box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
 }
 
 .container {
@@ -370,7 +177,7 @@ footer {
 
 /* Header Styles */
 header {
-    background: rgba(39, 39, 51, 0.9);
+    background: rgba(45, 45, 45, 0.95);
     backdrop-filter: blur(10px);
     position: fixed;
     top: 0;
@@ -388,7 +195,7 @@ header {
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
-    color: #ebe4e4;
+    color: #fef9e7;
     text-decoration: none;
 }
 
@@ -399,7 +206,7 @@ nav ul {
 }
 
 nav a {
-    color: #ebe4e4;
+    color: #fef9e7;
     text-decoration: none;
     transition: color 0.3s ease;
     padding: 0.5rem 1rem;
@@ -407,8 +214,8 @@ nav a {
 }
 
 nav a:hover, nav a.active {
-    color: #f2c106;
-    background: rgba(242, 193, 6, 0.1);
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.15);
 }
 
 /* WhatsApp Floating Pill Button */
@@ -419,14 +226,14 @@ nav a:hover, nav a.active {
     display: flex;
     align-items: center;
     gap: 8px;
-    background: #f2c106;
-    color: #272733;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f1f1f;
     padding: 12px 18px;
     border-radius: 50px;
     font-size: 15px;
     font-weight: bold;
     text-decoration: none;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     z-index: 1000;
 }
@@ -438,7 +245,7 @@ nav a:hover, nav a.active {
 
 .whatsapp-pill:hover {
     transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 20px rgba(251, 191, 36, 0.4);
 }
 
 /* Main Content */
@@ -455,9 +262,9 @@ nav a:hover, nav a.active {
 
 .page-header h1 {
     font-size: 3rem;
-    color: #272733;
+    color: #1f1f1f;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -465,7 +272,7 @@ nav a:hover, nav a.active {
 
 .page-header p {
     font-size: 1.2rem;
-    color: #272733;
+    color: #404040;
     max-width: 600px;
     margin: 0 auto;
 }
@@ -481,20 +288,22 @@ nav a:hover, nav a.active {
 /* Project Tiles */
 .project-tile {
     position: relative;
-    background: rgba(39, 39, 51, 0.05);
+    background: rgba(254, 249, 231, 0.8);
     border-radius: 20px;
     padding: 2.5rem;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(39, 39, 51, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
     cursor: pointer;
     transition: all 0.4s ease;
     overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
 .project-tile:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(242, 193, 6, 0.2);
-    border-color: rgba(242, 193, 6, 0.3);
+    box-shadow: 0 20px 40px rgba(251, 191, 36, 0.25);
+    border-color: rgba(251, 191, 36, 0.4);
+    background: rgba(254, 252, 232, 0.95);
 }
 
 .project-tile:hover .tile-overlay {
@@ -506,32 +315,34 @@ nav a:hover, nav a.active {
     position: absolute;
     top: 20px;
     right: 20px;
-    background: linear-gradient(45deg, #f2c106, #272733);
-    color: white;
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
+    color: #1f1f1f;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.9rem;
     font-weight: bold;
+    box-shadow: 0 2px 8px rgba(251, 191, 36, 0.3);
 }
 
 .project-icon {
     font-size: 3rem;
     margin-bottom: 1.5rem;
     display: block;
+    color: #f59e0b;
 }
 
 .project-tile h3 {
     font-size: 1.8rem;
-    color: #272733;
+    color: #1f1f1f;
     margin-bottom: 1rem;
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .project-tile p {
-    color: #272733;
+    color: #404040;
     line-height: 1.6;
     margin-bottom: 1.5rem;
 }
@@ -543,7 +354,7 @@ nav a:hover, nav a.active {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(45deg, rgba(242, 193, 6, 0.9), rgba(39, 39, 51, 0.9));
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.92) 0%, rgba(245, 158, 11, 0.92) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -554,11 +365,12 @@ nav a:hover, nav a.active {
 }
 
 .explore-text {
-    color: white;
+    color: #1f1f1f;
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 1px;
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.1);
 }
 
 /* Modal Styles */
@@ -570,12 +382,12 @@ nav a:hover, nav a.active {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(31, 31, 31, 0.8);
     backdrop-filter: blur(5px);
 }
 
 .modal-content {
-    background: linear-gradient(135deg, #ebe4e4 0%, #ebe4e4 100%);
+    background: linear-gradient(135deg, #fefdf8 0%, #fffbeb 100%);
     margin: 2% auto;
     padding: 0;
     border-radius: 20px;
@@ -583,8 +395,9 @@ nav a:hover, nav a.active {
     max-width: 1000px;
     max-height: 90vh;
     overflow: hidden;
-    border: 1px solid rgba(39, 39, 51, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.3);
     animation: modalSlideIn 0.3s ease-out;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
 }
 
 @keyframes modalSlideIn {
@@ -603,32 +416,33 @@ nav a:hover, nav a.active {
     justify-content: space-between;
     align-items: center;
     padding: 2rem;
-    border-bottom: 1px solid rgba(39, 39, 51, 0.1);
-    background: rgba(39, 39, 51, 0.05);
+    border-bottom: 1px solid rgba(251, 191, 36, 0.2);
+    background: rgba(254, 249, 231, 0.8);
 }
 
 .modal-header h2 {
     display: flex;
     align-items: center;
     gap: 1rem;
-    color: #272733;
+    color: #1f1f1f;
     margin: 0;
     font-size: 1.8rem;
 }
 
 #modalIcon {
     font-size: 2rem;
+    color: #f59e0b;
 }
 
 #modalTitleText {
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .close {
-    color: #272733;
+    color: #404040;
     font-size: 2rem;
     font-weight: bold;
     cursor: pointer;
@@ -637,7 +451,7 @@ nav a:hover, nav a.active {
 }
 
 .close:hover {
-    color: #f2c106;
+    color: #f59e0b;
 }
 
 .modal-body {
@@ -652,12 +466,12 @@ nav a:hover, nav a.active {
 }
 
 .modal-body::-webkit-scrollbar-track {
-    background: rgba(39, 39, 51, 0.1);
+    background: rgba(251, 191, 36, 0.1);
     border-radius: 4px;
 }
 
 .modal-body::-webkit-scrollbar-thumb {
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 100%);
     border-radius: 4px;
 }
 
@@ -670,20 +484,22 @@ nav a:hover, nav a.active {
 
 /* Project Items */
 .project-item {
-    background: rgba(39, 39, 51, 0.05);
+    background: rgba(254, 249, 231, 0.6);
     border-radius: 15px;
     padding: 1.5rem;
     transition: all 0.3s ease;
-    border: 1px solid rgba(39, 39, 51, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
     display: flex;
     gap: 1.5rem;
     align-items: flex-start;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
 }
 
 .project-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(242, 193, 6, 0.2);
-    border-color: rgba(242, 193, 6, 0.3);
+    box-shadow: 0 10px 20px rgba(251, 191, 36, 0.2);
+    border-color: rgba(251, 191, 36, 0.4);
+    background: rgba(254, 252, 232, 0.8);
 }
 
 .project-image {
@@ -694,8 +510,10 @@ nav a:hover, nav a.active {
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: rgba(39, 39, 51, 0.1);
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.15) 0%, rgba(245, 158, 11, 0.15) 100%);
     border-radius: 15px;
+    color: #f59e0b;
+    border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .project-details {
@@ -703,17 +521,17 @@ nav a:hover, nav a.active {
 }
 
 .project-details h4 {
-    color: #272733;
+    color: #1f1f1f;
     font-size: 1.3rem;
     margin-bottom: 0.8rem;
-    background: linear-gradient(45deg, #f2c106, #272733);
+    background: linear-gradient(135deg, #f59e0b 0%, #eab308 50%, #ca8a04 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
 .project-details p {
-    color: #272733;
+    color: #404040;
     line-height: 1.6;
     margin-bottom: 1rem;
 }
@@ -726,22 +544,24 @@ nav a:hover, nav a.active {
 
 .project-date,
 .project-client {
-    background: rgba(39, 39, 51, 0.1);
-    color: #272733;
+    background: rgba(254, 249, 231, 0.8);
+    color: #404040;
     padding: 0.3rem 0.8rem;
     border-radius: 15px;
     font-size: 0.9rem;
-    border: 1px solid rgba(39, 39, 51, 0.1);
+    border: 1px solid rgba(251, 191, 36, 0.2);
 }
 
 .project-date {
-    background: linear-gradient(45deg, rgba(242, 193, 6, 0.2), rgba(39, 39, 51, 0.2));
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.2) 0%, rgba(245, 158, 11, 0.2) 100%);
+    color: #1f1f1f;
+    font-weight: 500;
 }
 
 /* Footer */
 footer {
-    background: rgba(39, 39, 51, 0.9);
-    color: #ebe4e4;
+    background: linear-gradient(135deg, rgba(45, 45, 45, 0.95) 0%, rgba(31, 31, 31, 0.95) 100%);
+    color: #fef9e7;
     text-align: center;
     padding: 2rem 0;
     margin-top: 4rem;
